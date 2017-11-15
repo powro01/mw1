@@ -1,0 +1,17 @@
+.btn {
+    padding: 0.5rem;
+    background: transparent;
+    border: 3px solid $form-border;
+    color: $form-border;
+    cursor: pointer;
+    transition: 0.5s;
+    
+    &--large {
+        font-size: 1.5rem;
+    }
+
+    &:hover {
+        background: #ffffff;
+        color: #1f1f1f;
+    }
+}

@@ -1,0 +1,92 @@
+.navigation {
+    position: fixed;
+    top: 7rem;
+    left: 2rem;
+    right: 2rem;
+    background: $navigation-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    z-index: 999;
+    transition: opacity 0.5s;
+    opacity: 0;
+    visibility: hidden;
+
+    @include bp-large {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include bp-medium {
+        height: 3rem;
+        top: 2rem;
+        left: 7rem;
+    }
+
+    &.toggle {
+        opacity: 1;
+        visibility: visible;
+
+        @include bp-large {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__trigger {
+        background: $navigation-color;
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 999;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &--top {
+            top: 2rem;
+            left: 2rem;
+        }
+
+        &--bottom {
+            bottom: 2rem;
+            right: 2rem;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        font-family: 'Pacifico', cursive;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        li {
+            padding: .75rem;
+            font-size: 1.5em;
+            
+            a {
+                color: $primary;
+                text-decoration: none;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $navigation-link-color;
+                }
+            }
+        }
+
+        @include bp-medium {
+            flex-direction: row;
+        }
+    }
+}

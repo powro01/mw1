@@ -1,0 +1,65 @@
+$navigation-link-color: #ffffff;
+
+$primary: #FFEE58;
+$secondary: #BA68C8;
+$secondary-font-color: #ffffff;
+$third: #2ecc71;
+$third-shadow: #26af5f;
+$form-border: #ffffff;
+
+$menu-trigger-background: #ffffff;
+$brand-name-color: #ffffff;
+$brand-name-shadow: #4A148C;
+
+$navigation-color: #a032cc;
+
+.text-shadow {
+    &--primary {
+        text-shadow: 3px 3px $brand-name-shadow;
+    }
+    &--secondary {
+        text-shadow: 3px 3px $secondary;
+    }
+    &--third {
+        text-shadow: 3px 3px $third-shadow;
+    }
+}
+
+.secondary-bg {
+    background: $secondary;
+    color: $secondary-font-color;
+}
+
+.third-bg {
+    background: $third;
+    color: #ffffff;
+
+    &::before {
+        content: "";
+        width: 0;
+        border-bottom: 2rem solid $third;
+        border-right: calc(100vw - 2rem) solid transparent;
+        position: absolute;
+        top: -2rem;
+        left: 0;
+    }
+}
+
+.primary-bg {
+    background: $primary;
+}
+
+.bg-white {
+    background: #ffffff;
+}
+
+.bg-image-one {
+    background: url('../img/2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px #16a085;
+}

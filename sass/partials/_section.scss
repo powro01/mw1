@@ -1,0 +1,84 @@
+.section {
+    width: 100%;
+    position: relative;
+    // padding: 3rem 6rem;
+    padding: 3rem;
+
+    &__center-image {
+        height: 70vh;
+        width: auto;
+    }
+
+    &--flex-column {
+        flex-direction: column;
+    }
+
+    &--flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--max-height {
+        height: 100%;
+    }
+
+    &--triangle-headers {
+        &::before {
+            content: "";
+            width: 0;
+            border-bottom: 2rem solid $secondary;
+            border-right: calc(100vw - 2rem) solid transparent;
+            position: absolute;
+            top: -2rem;
+            left: 0;
+        }
+
+        &::after {
+            content: "";
+            width: 0;
+            border-top: 2rem solid $secondary;
+            border-right: calc(100vw - 2rem) solid transparent;
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            z-index: 997;
+        }
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+.header {
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    background: url('../img/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    flex-direction: column;
+}
+
+.parallax {
+    position: relative;
+    background: url('../img/4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 50%;
+}
+
+.big-header {
+    width: 100%;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    color: $brand-name-color;
+    text-align: center;
+}
+
+.typed {
+    font-size: 2rem;
+    color: $brand-name-color;
+    min-height: 4rem;
+}

@@ -1,0 +1,21 @@
+.row {
+    padding: 1rem;
+
+    &--column {
+        flex-direction: column !important;
+    }
+}
+
+[class*=col-] {
+    margin-bottom: 2rem;
+}
+
+.visible {
+    display: none;
+
+    &--sm {
+        @include bp-medium {
+            display: flex;
+        }
+    }
+}
